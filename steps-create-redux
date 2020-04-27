@@ -1,0 +1,11 @@
+npm install redux react-redux
+
+import {createStore} from "redux"///in index.js
+
+create store---->const store=createStore()
+
+import {Provider} from "react-redux"
+
+wrap "App" component with provider
+
+initialize <provider> with store....<Provider store={store}
