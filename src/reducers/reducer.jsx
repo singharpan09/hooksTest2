@@ -8,7 +8,9 @@ const iState = {
 };
 //initial data for reducer
 //inialilly reducer is only showing data(state)
+//now action have the data(payload)...reducer will decide what to do
 const reducer = (state = iState, action) => {
+  console.log(action);
   return state;
 };
 
