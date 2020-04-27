@@ -9,3 +9,13 @@ import {Provider} from "react-redux"
 wrap "App" component with provider
 
 initialize <provider> with store....<Provider store={store}
+
+-------------------------------Reducer------------------------
+
+Reducer is passed as argument to store...i.e const store=createStore(reducer)
+
+Reducer initialize data to "central store".....there can be more than one reducer possible
+
+Reducer is basically a type of Function....a new "reducers" folder is created and new file "reducer.jsx" is initalized..
+
+make reducer function and export it
