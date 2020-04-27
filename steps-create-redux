@@ -1,5 +1,7 @@
 npm install redux react-redux
 
+-------------------------Store Creation..................
+
 import {createStore} from "redux"///in index.js
 
 create store---->const store=createStore()
@@ -10,7 +12,7 @@ wrap "App" component with provider
 
 initialize <provider> with store....<Provider store={store}
 
--------------------------------Reducer------------------------
+-------------------------------Reducer Creation------------------------
 
 Reducer is passed as argument to store...i.e const store=createStore(reducer)
 
