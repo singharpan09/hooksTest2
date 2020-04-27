@@ -4,11 +4,12 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { createStore } from "redux";
-import { Provider } from "react-redux"; //used for communiation b/w reactapp and redux
-//main App component is wrappped with {Provider}
+import { Provider } from "react-redux";
+import reducer from "./reducers/reducer";
 
-const store = createStore(); //store data is provided in argumnet
-//now store is assigned to "store " property of Provider
+const store = createStore(reducer);
+//store take reducer as argument
+//reducer initialize data in centeral store
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
