@@ -7,7 +7,10 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import reducer from "./reducers/reducer";
 
-const store = createStore(reducer);
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+); //redux tool extension is passed as second argumnet in central store for debugging
 //store take reducer as argument
 //reducer initialize data in centeral store
 ReactDOM.render(
