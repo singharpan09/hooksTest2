@@ -72,3 +72,17 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ### React-redux install
 
 npm install redux react-redux
+
+### import react and react-redux in "index.js"
+
+import { Provider } from "react-redux";
+const store = createStore();
+
+ReactDOM.render(
+<React.StrictMode>
+<Provider>
+<App />
+</Provider>
+</React.StrictMode>,
+document.getElementById("root")
+);
