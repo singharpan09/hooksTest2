@@ -5,8 +5,9 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
+import { reducer } from "./reducers/reducer";
 
-const store = createStore();
+const store = createStore(reducer);
 //store take reducer as argument
 //reducer initialize data in centeral store
 ReactDOM.render(
