@@ -42,3 +42,11 @@ and HigherOrder componnet takes a component as argument
 connect is wrapped to App component like....i.e  export default connect()(App);
 
 now we can use store data in our component using "props"
+
+-------------------Dispatch Action----------------------------------
+
+//for updating the state...action will be "type and payload(data)
+
+
+
+
