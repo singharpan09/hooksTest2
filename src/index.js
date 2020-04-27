@@ -6,11 +6,12 @@ import * as serviceWorker from "./serviceWorker";
 import { createStore } from "redux";
 import { Provider } from "react-redux"; //used for communiation b/w reactapp and redux
 //main App component is wrappped with {Provider}
-const store = createStore(); //store data is provided in argumnet
 
+const store = createStore(); //store data is provided in argumnet
+//now store is assigned to "store " property of Provider
 ReactDOM.render(
   <React.StrictMode>
-    <Provider>
+    <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>,
