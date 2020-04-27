@@ -13,6 +13,7 @@ wrap "App" component with provider
 initialize <provider> with store....<Provider store={store}
 
 -------------------------------Reducer Creation------------------------
+Only reducer have power to update state.
 
 Reducer is passed as argument to store...i.e const store=createStore(reducer)
 
@@ -25,4 +26,18 @@ make reducer function and export it
 reducer take (state,action) as argumnet.... reducer should have some initial data to initlaize store....
 
 then reducer is imported and passed to store in "index.js 
+
+....................Subscribe redux by Component............
+
+now there is some initail data available in store 
+
+to use that data by "App.js" ...this component need to subscribe to store
+
+for that we need to ....import {connect} from "react-redux".....
+
+now "connect" is wrapped to App component...connect return some Higher Order Component....
+
+and HigherOrder componnet takes a component as argument
+
+connect is wrapped to App component like....i.e  export default connect()(App);
 
