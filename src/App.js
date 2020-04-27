@@ -9,21 +9,34 @@ function App(props) {
     <div className="App">
       <h2>This is App component</h2>
       <p>The user name is {props.myname}</p>
+      <button
+        onClick={() => {
+          props.changeName("Rahul");
+        }}
+      >
+        Click Here
+      </button>
     </div>
   );
 }
-//Note:to use the value we can directly use through store
-//but to update/change any data in store we need to follow the steps...component-->action--->reducer-->store
-//any name can be used
 
-//a variable is used to map state to props...it returns a object..key,value...we use "key" to use value(in store) using props
-//It is passed to connect as argument
-//it takes state as argument
 const mapStateToProps = (state) => {
   return {
     myname: state.name,
   };
 };
 
-export default connect(mapStateToProps)(App);
+//This changeName will be "dispatched" to reducer...for updating the state
+//"changeName" props is availbale in App component
+//changeName will accept some "name" argument
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changeName: (name) => {
+      dispatch({ type: "CHANGE_NAME", payload: name });
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
 //parethesis() is used to invoke and App component is passed to it...as "connect" return Higher Order Component
+//If Component is not needed to display but only update the state...then first argument to connect() is null
