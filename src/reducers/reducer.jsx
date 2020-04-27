@@ -7,7 +7,7 @@ const iState = {
   wishes: ["eat", "code", "repeat"],
 };
 //initial data for reducer
-
+//inialilly reducer is only showing data(state)
 const reducer = (state = iState, action) => {
   return state;
 };

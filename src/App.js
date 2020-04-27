@@ -9,6 +9,13 @@ function App(props) {
     <div className="App">
       <h2>This is App component</h2>
       <p>The user name is {props.myname}</p>
+      <button
+        onClick={() => {
+          props.changeName("Rahul");
+        }}
+      >
+        Click Here
+      </button>
     </div>
   );
 }
@@ -19,12 +26,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-//for updating the state
-//this returns a methods which we call with props....we give method name "changeName" here
-//method takes a argument...which is changing
-//dispatch()takes action(type,payload) as argumnet
-//action is a type of object
-//this is given as second argument to connect()
+//This changeName will be "dispatched" to reducer...for updating the state
 //"changeName" props is availbale in App component
 //changeName will accept some "name" argument
 const mapDispatchToProps = (dispatch) => {
