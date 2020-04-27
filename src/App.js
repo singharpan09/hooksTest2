@@ -26,6 +26,7 @@ const mapStateToProps = (state) => {
 //action is a type of object
 //this is given as second argument to connect()
 //"changeName" props is availbale in App component
+//changeName will accept some "name" argument
 const mapDispatchToProps = (dispatch) => {
   return {
     changeName: (name) => {
