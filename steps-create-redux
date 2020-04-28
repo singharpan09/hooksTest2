@@ -78,3 +78,10 @@ like..i.e...for from we need a reducer,for authenticaion we need a reducer,for u
 
 different tasks need different reducers
 
+///at the end we combine all the reducer
+
+we first import {combineReducer} from "redux"
+
+//we send our expected type of state data from the reducers
+
+//finally combine reducer combine all the data in "index.js" and make a state object
