@@ -63,5 +63,7 @@ redux thunk work as middleware b/w action and reducer
 thunk is used using --->npm install redux-thunk
 
 
+inilaially we were giving action payload directly to reducer....and now data is taking time to come ....so we need thunk in b/w
 
+thunk is used in action-creator file for asynchronous opertions
 
