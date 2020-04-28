@@ -85,3 +85,8 @@ we first import {combineReducer} from "redux"
 //we send our expected type of state data from the reducers
 
 //finally combine reducer combine all the data in "index.js" and make a state object
+
+
+---------------------------------Sequence of Opertions....................
+
+Component Subscribe-->Action-->Reducer-->Store
