@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { anotherName } from "./actions/myaction";
 
 import "./App.css";
 
@@ -32,7 +33,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     changeName: (name) => {
-      dispatch({ type: "CHANGE_NAME", payload: name });
+      dispatch(anotherName(name));
     },
   };
 };
