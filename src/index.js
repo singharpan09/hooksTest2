@@ -3,16 +3,16 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { createStore } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
 import { Provider } from "react-redux";
 import reducer from "./reducers/reducer";
 
-const store = createStore(
-  reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-); //redux tool extension is passed as second argumnet in central store for debugging
-//store take reducer as argument
-//reducer initialize data in centeral store
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk))); //thunk works as middleware b/w action and reducer
+//If we are using middleware then there is different approch to use redux dev tools
+//need to import compose from redux
+//need to pass middleware to composeEnhancer to use ...middleware and redux tool simultanesosly
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

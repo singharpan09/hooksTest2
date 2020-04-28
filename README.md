@@ -75,14 +75,8 @@ npm install redux react-redux
 
 ### import react and react-redux in "index.js"
 
-import { Provider } from "react-redux";
-const store = createStore();
+Redux-thunk is library used for asynchronous operations...i.e fetching some data from internet,get request,post request
 
-ReactDOM.render(
-<React.StrictMode>
-<Provider>
-<App />
-</Provider>
-</React.StrictMode>,
-document.getElementById("root")
-);
+action-creator is most useful with redux-thunk
+
+### npm install redux-thunk
