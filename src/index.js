@@ -17,6 +17,7 @@ const masterReducer = combineReducers({
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   masterReducer,
+  { name: "Ram", wish: ["eat", "code", "repeat"] },
   composeEnhancers(applyMiddleware(thunk))
 );
 
