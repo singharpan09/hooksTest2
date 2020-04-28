@@ -8,7 +8,7 @@ import thunk from "redux-thunk";
 import { Provider } from "react-redux";
 import reducer from "./reducers/reducer";
 
-const store = createStore(reducer, applyMiddleware);
+const store = createStore(reducer, applyMiddleware(thunk)); //thunk works as middleware b/w action and reducer
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
