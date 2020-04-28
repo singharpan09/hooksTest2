@@ -5,11 +5,14 @@ import { anotherName } from "./actions/myaction";
 import "./App.css";
 
 function App(props) {
-  console.log(props);
+  const mywishes = props.mywish.map((item) => {
+    return <h2>{item}</h2>;
+  });
   return (
     <div className="App">
       <h2>This is App component</h2>
       <p>The user name is {props.myname}</p>
+      {mywishes}
       <button
         onClick={() => {
           props.changeName();
@@ -20,13 +23,15 @@ function App(props) {
     </div>
   );
 }
-
+//to get data "mapStatetoProps"
 const mapStateToProps = (state) => {
   return {
     myname: state.name,
+    mywish: state.wish,
   };
 };
 //we are not sending any data..so no need to send argument to API
+//to change/update data "mapDispatchToProps"
 const mapDispatchToProps = (dispatch) => {
   return {
     changeName: () => {
