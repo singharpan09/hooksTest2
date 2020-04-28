@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import { anotherName } from "./actions/myaction";
+import { anotherName, addWish } from "./actions/myaction";
 
 import "./App.css";
 
 function App(props) {
   const mywishes = props.mywish.map((item) => {
-    return <h2>{item}</h2>;
+    return <h2 key={Math.random()}>{item}</h2>;
   });
   return (
     <div className="App">
@@ -19,6 +19,13 @@ function App(props) {
         }}
       >
         Click Here
+      </button>
+      <button
+        onClick={() => {
+          props.addWish();
+        }}
+      >
+        Add Wish
       </button>
     </div>
   );
@@ -37,9 +44,19 @@ const mapDispatchToProps = (dispatch) => {
     changeName: () => {
       dispatch(anotherName());
     },
+    addWish: () => {
+      dispatch(addWish());
+    },
   };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 //parethesis() is used to invoke and App component is passed to it...as "connect" return Higher Order Component
 //If Component is not needed to display but only update the state...then first argument to connect() is null
+
+// addWish: () => {
+//  dispatch(addWish);
+//},
+//here first "addWish" will be used as props in "Add" component
+//& second "addWish" will be dispatched to action for the furthur operation...
+//they both could have different names
