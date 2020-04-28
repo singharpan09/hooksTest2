@@ -67,3 +67,14 @@ inilaially we were giving action payload directly to reducer....and now data is 
 
 thunk is used in action-creator file for asynchronous opertions
 
+
+
+
+---------------------------Combine Reducers-----------------------------------
+
+In every project we need more than one reducers..
+
+like..i.e...for from we need a reducer,for authenticaion we need a reducer,for updation we need a reducer
+
+different tasks need different reducers
+
