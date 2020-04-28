@@ -59,6 +59,9 @@ new actions folder is made
 
 action creator is a function that return action
 
+redux thunk work as middleware b/w action and reducer
+thunk is used using --->npm install redux-thunk
+
 
 
 
