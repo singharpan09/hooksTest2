@@ -50,3 +50,15 @@ now we can use store data in our component using "props"
 
 
 
+
+------------------------------Action Creator and Thunk.........................
+
+//Used for Asyschronous actions
+action is a object
+new actions folder is made
+
+action creator is a function that return action
+
+
+
+
