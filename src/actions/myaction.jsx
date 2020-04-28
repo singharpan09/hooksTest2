@@ -48,3 +48,10 @@ export const anotherName = () => {
 };
 
 //data fetched through async and await.....await resolves the promise
+
+export const addWish = () => {
+  return {
+    type: "ADD_WISH",
+    payload: "enjoy",
+  };
+};
