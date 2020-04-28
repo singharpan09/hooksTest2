@@ -12,7 +12,7 @@ function App(props) {
       <p>The user name is {props.myname}</p>
       <button
         onClick={() => {
-          props.changeName("Rahul");
+          props.changeName();
         }}
       >
         Click Here
@@ -26,14 +26,11 @@ const mapStateToProps = (state) => {
     myname: state.name,
   };
 };
-
-//This changeName will be "dispatched" to reducer...for updating the state
-//"changeName" props is availbale in App component
-//changeName will accept some "name" argument
+//we are not sending any data..so no need to send argument to API
 const mapDispatchToProps = (dispatch) => {
   return {
-    changeName: (name) => {
-      dispatch(anotherName(name));
+    changeName: () => {
+      dispatch(anotherName());
     },
   };
 };
