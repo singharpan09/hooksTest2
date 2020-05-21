@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { anotherName, addWish } from "./actions/myaction";
-
+//now we will use hooks to get and dispatch values to store
 import "./App.css";
 
 function App(props) {
