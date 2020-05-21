@@ -6,15 +6,21 @@ import "./App.css";
 //will use useSelector and useDispatch hooks
 //these hooks are the part of react-redux
 //we don't need connect now to connect to store
+//useSelector have direct access to store ...like mapStatetoProps have
 function App(props) {
-  // const mywishes = props.mywish.map((item) => {
-  //   return <h2 key={Math.random()}>{item}</h2>;
-  // });
+  const myname = useSelector((state) => {
+    return state.name;
+  });
+
+  const mywishes = useSelector((state) => {
+    return state.wish;
+  });
+  //wishes get from store
   return (
     <div className="App">
       <h2>This is App component</h2>
-      <p>The user name is {props.myname}</p>
-      {mywishes}
+      <p>The user name is {myname}</p>
+      {/* {mywishes}
       <button
         onClick={() => {
           props.changeName();
@@ -28,7 +34,7 @@ function App(props) {
         }}
       >
         Add Wish
-      </button>
+      </button> */}
     </div>
   );
 }
