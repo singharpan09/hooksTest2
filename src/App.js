@@ -7,16 +7,13 @@ import "./App.css";
 //these hooks are the part of react-redux
 //we don't need connect now to connect to store
 //useSelector have direct access to store ...like mapStatetoProps have
-function App(props) {
-  const myname = useSelector((state) => {
-    return state.name;
+function App() {
+  const data = useSelector((state) => {
+    return state;
   });
 
-  const wish = useSelector((state) => {
-    return state.wish;
-  });
   //wishes get from store
-  const mywishes = wish.map((item) => {
+  const mywishes = data.wish.map((item) => {
     return (
       <React.Fragment>
         <h2 key={Math.random()}>{item}</h2>
@@ -26,7 +23,7 @@ function App(props) {
   return (
     <div className="App">
       <h2>This is App component</h2>
-      <p>The user name is {myname}</p>
+      <p>The user name is {data.name}</p>
       {mywishes}
       {/* <button
       //   onClick={() => {
