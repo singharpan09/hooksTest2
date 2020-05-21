@@ -7,11 +7,14 @@ import "./App.css";
 //these hooks are the part of react-redux
 //we don't need connect now to connect to store
 //useSelector have direct access to store ...like mapStatetoProps have
+//now for dispatching the action we use "useDispatch" hooks
 function App() {
   const data = useSelector((state) => {
     return state;
   });
-
+  const dispatch = useDispatch();
+  //we simply need to call the useDispatch
+  //then will call action Creator using this dispatch
   //wishes get from store
   const mywishes = data.wish.map((item) => {
     return (
