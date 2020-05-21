@@ -46,6 +46,9 @@ function App() {
     </div>
   );
 }
+
+//now we don't need "mapStatetoProps" or "mapDispatchtoProps" to "get data" or "dispatch actions"
+
 // //to get data "mapStatetoProps"
 // const mapStateToProps = (state) => {
 //   return {
