@@ -12,29 +12,37 @@ function App(props) {
     return state.name;
   });
 
-  const mywishes = useSelector((state) => {
+  const wish = useSelector((state) => {
     return state.wish;
   });
   //wishes get from store
+  const mywishes = wish.map((item) => {
+    return (
+      <React.Fragment>
+        <h2 key={Math.random()}>{item}</h2>
+      </React.Fragment>
+    );
+  });
   return (
     <div className="App">
       <h2>This is App component</h2>
       <p>The user name is {myname}</p>
-      {/* {mywishes}
-      <button
-        onClick={() => {
-          props.changeName();
-        }}
-      >
-        Click Here
-      </button>
-      <button
-        onClick={() => {
-          props.addWish();
-        }}
-      >
-        Add Wish
-      </button> */}
+      {mywishes}
+      {/* <button
+      //   onClick={() => {
+      //     props.changeName();
+      //   }}
+      // >
+      //   Click Here
+      // </button>
+      // <button
+      //   onClick={() => {
+      //     props.addWish();
+      //   }}
+      // >
+      //   Add Wish
+      // </button> */}{" "}
+      // */}
     </div>
   );
 }
