@@ -16,6 +16,7 @@ function App() {
   //we simply need to call the useDispatch
   //then will call action Creator using this dispatch
   //wishes get from store
+  //dispatch takes "actionCreator" as argument
   const mywishes = data.wish.map((item) => {
     return (
       <React.Fragment>
