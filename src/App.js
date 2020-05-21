@@ -5,6 +5,7 @@ import { anotherName, addWish } from "./actions/myaction";
 import "./App.css";
 //will use useSelector and useDispatch hooks
 //these hooks are the part of react-redux
+//we don't need connect now to connect to store
 function App(props) {
   // const mywishes = props.mywish.map((item) => {
   //   return <h2 key={Math.random()}>{item}</h2>;
