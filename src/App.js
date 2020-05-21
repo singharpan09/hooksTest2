@@ -28,21 +28,20 @@ function App() {
       <h2>This is App component</h2>
       <p>The user name is {data.name}</p>
       {mywishes}
-      {/* <button
-      //   onClick={() => {
-      //     props.changeName();
-      //   }}
-      // >
-      //   Click Here
-      // </button>
-      // <button
-      //   onClick={() => {
-      //     props.addWish();
-      //   }}
-      // >
-      //   Add Wish
-      // </button> */}{" "}
-      // */}
+      <button
+        onClick={() => {
+          dispatch(anotherName());
+        }}
+      >
+        Click Here
+      </button>
+      <button
+        onClick={() => {
+          dispatch(addWish());
+        }}
+      >
+        Add Wish
+      </button>
     </div>
   );
 }
